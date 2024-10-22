@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Book Appointment | Mental  HealthCare</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f0f4ff; /* Light background */
+        }
+
+        header {
+            background-color: #4a00e0; /* Header background color */
+            padding: 10px 0;
+            color: white;
+        }
+
+        .nav__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav__logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav__links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav__links .link a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav__links .link a:hover {
+            color: #0616f3d9; /* Highlight color on hover */
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white; /* White text on button */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0008ff; /* Darker blue on hover */
+        }
+
+        .appointment__container {
+            position: relative;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            background: linear-gradient(135deg, #6a00f4, #c857ff); /* Gradient background */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: 1;
+        }
+
+        .appointment__content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Light overlay background for form */
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            color: #333;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .appointment__form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form__group {
+            margin-bottom: 15px;
+        }
+
+        .form__group label {
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form__group input,
+        .form__group select,
+        .form__group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .footer {
+            background-color: #b392ef; /* Footer background color */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer__container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer__col {
+            width: 25%; /* Make columns equal width */
+        }
+
+        .footer__col h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .footer__col a {
+            color: #e5ecf3; /* Link color in footer */
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+            transition: color 0.3s;
+        }
+
+        .footer__col a:hover {
+            color: white; /* Change link color on hover */
+        }
+
+        .footer__bottom {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="nav__container">
+        <div class="nav__logo">Mental <span>HealthCare</span></div>
+        <ul class="nav__links">
+            <li class="link"><a href="index.html">Home</a></li>
+            <li class="link"><a href="about.html">About Us</a></li>
+            <li class="link"><a href="services.html">Services</a></li>
+            <li class="link"><a href="book-appointment.html">Book Appointment</a></li>
+            <li class="link"><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <button class="btn">Contact Us</button>
+    </nav>
+</header>
+
+<section class="appointment__container" style="background-image: url('assets/background.jpg'); background-size: cover; background-position: center;">
+    <div class="overlay"></div>
+    <div class="appointment__content">
+        <h1>Book Your Appointment</h1>
+        <p>Fill out the form below to schedule your appointment with us. Our team will contact you shortly to confirm.</p>
+
+        <form action="thank-you.html" method="get" class="appointment__form">
+            <div class="form__group">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required placeholder="Enter your first name">
+            </div>
+            <div class="form__group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required placeholder="Enter your last name">
+            </div>
+            <div class="form__group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form__group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+            </div>
+            <div class="form__group">
+                <label for="appointment-date">Preferred Appointment Date:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+            </div>
+            <div class="form__group">
+                <label for="doctor">Select Doctor:</label>
+                <select id="doctor" name="doctor" required>
+                    <option value="" disabled selected>Choose a doctor</option>
+                    <option value="dr-emily-smith">Dr. sanduk Ruit (Cardiologist)</option>
+                    <option value="dr-james-anderson">Dr. bhagwan koirala(Neurosurgeon)</option>
+                    <option value="dr-michael-lee">Dr. upendra devkota (Dermatologist)</option>
+                </select>
+            </div>
+            <div class="form__group">
+                <label for="message">Additional Message (optional):</label>
+                <textarea id="message" name="message" rows="4" placeholder="Any additional information you want to provide"></textarea>
+            </div>
+            <button class="btn" type="submit">Submit Appointment</button>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__col">
+            <h3>Mental <span>HealthCare</span></h3>
+            <p>We are honored to be a part of your healthcare journey and committed to delivering compassionate, personalized, and top-notch care every step of the way.</p>
+        </div>
+        <div class="footer__col">
+            <h4>About Us</h4>
+            <p><a href="index.html">Home</a></p>
+            <p><a href="about.html">About Us</a></p>
+            <p><a href="work-with-us.html">Work With Us</a></p>
+            <p><a href="blog.html">Our Blog</a></p>
+        </div>
+        <div class="footer__col">
+            <h4>Services</h4>
+            <p><a href="services.html">Primary Care</a></p>
+            <p><a href="services.html">Cardiology</a></p>
+            <p><a href="services.html">Dermatology</a></p>
